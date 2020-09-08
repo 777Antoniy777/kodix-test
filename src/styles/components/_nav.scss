@@ -1,0 +1,24 @@
+.nav {
+  &__logo-link {
+    @include reset-margin;
+    display: block;
+    width: 300px;
+    height: 63px;
+
+    @media (min-width: $media-tb) {
+      width: 494px;
+      height: 104px;
+      transform: translateY(3px);
+    }
+
+    img {
+      width: 300px;
+      height: 63px;
+
+      @media (min-width: $media-tb) {
+        width: 494px;
+        height: 104px;
+      }
+    }
+  }
+}

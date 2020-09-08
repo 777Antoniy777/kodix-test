@@ -16,6 +16,12 @@
     <header class="main-header">
       <div class="site-wrapper">
 
+        <nav class="main-header__nav nav">
+          <a class="nav__logo-link">
+            <img src="./assets/images/svg/logo-mb.svg" alt="Captain Quack logo">
+          </a>
+        </nav>
+
       </div>
     </header>
 
@@ -25,6 +31,21 @@
       <section class="main__form form">
         <div class="site-wrapper">
           <h2 class="form__title">Форма добавления нового автомобиля</h2>
+
+          <div class="form__field-wrapper">
+            <input id="name" type="text" name="name" required>
+            <label for="name">Название</label>
+          </div>
+
+          <div class="form__field-wrapper form__field-wrapper--price form__field-wrapper--half-width">
+            <input id="price" type="text" name="price" required>
+            <label for="price">Цена</label>
+          </div>
+
+          <div class="form__field-wrapper form__field-wrapper--half-width">
+            <input id="year" type="text" name="year" required>
+            <label for="year">Год</label>
+          </div>
         </div>
       </section>
 

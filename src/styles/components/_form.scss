@@ -1,5 +1,66 @@
 .form {
+  .site-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &__title {
     @include visually-hidden;
   }
+
+  &__field-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 35px;
+
+    &--half-width {
+      @include set-width(160px, $w-site-wrapper-mb);
+    }
+
+    &--price {
+      margin-right: 20px * 100% / $w-site-wrapper-mb;
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      padding-left: 10px;
+      color: $c-grey;
+      transform: translateY(-50%);
+      transition: top 0.3s;
+      pointer-events: none;
+    }
+
+    input {
+      width: 100%;
+      height: 40px;
+      padding: 0 10px;
+      font-size: 18px;
+      color: $c-shark;
+      border: 1px solid #dadada;
+      border-bottom-width: 2px;
+      transition: border-color 0.3s;
+      cursor: pointer;
+      outline: none;
+
+      // hover
+      &:hover {
+        border-bottom-color: $c-monza;
+      }
+
+      // active
+      &:active,
+      &:focus {
+        border-bottom-color: $c-shark;
+      }
+    }
+  }
+}
+
+// active label
+.form__field-wrapper input:active + label,
+.form__field-wrapper input:focus + label {
+  top: -12px;
+  pointer-events: visible;
 }
