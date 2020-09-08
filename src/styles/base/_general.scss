@@ -15,7 +15,6 @@ body {
   min-width: $media-mb;
   height: 100%;
   margin: 0;
-  padding: 10px;
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
@@ -26,6 +25,7 @@ body {
 }
 
 .site-wrapper {
+  @include set-width($w-site-wrapper-mb, $w-layout-mb);
   max-width: $w-site-wrapper-dt;
   margin-right: auto;
   margin-left: auto;
