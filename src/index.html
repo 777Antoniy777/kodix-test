@@ -30,22 +30,69 @@
 
       <section class="main__form form">
         <div class="site-wrapper">
-          <h2 class="form__title">Форма добавления нового автомобиля</h2>
+          <form class="form__wrapper" action="#" method="POST">
+            <h2 class="form__title">Форма добавления нового автомобиля</h2>
 
-          <div class="form__field-wrapper">
-            <input id="name" type="text" name="name" required>
-            <label for="name">Название</label>
-          </div>
+            <div class="form__field-wrapper form__field-wrapper--name">
+              <input id="name" type="text" name="name" required>
+              <label for="name">Название</label>
+            </div>
 
-          <div class="form__field-wrapper form__field-wrapper--price form__field-wrapper--half-width">
-            <input id="price" type="text" name="price" required>
-            <label for="price">Цена</label>
-          </div>
+            <div class="form__field-wrapper form__field-wrapper--price">
+              <input id="price" type="text" name="price" required>
+              <label for="price">Цена</label>
+            </div>
 
-          <div class="form__field-wrapper form__field-wrapper--half-width">
-            <input id="year" type="text" name="year" required>
-            <label for="year">Год</label>
-          </div>
+            <div class="form__field-wrapper form__field-wrapper--year">
+              <input id="year" type="text" name="year" required>
+              <label for="year">Год</label>
+            </div>
+
+            <div class="form__field-wrapper form__field-wrapper--description">
+              <input id="description" type="text" name="description">
+              <label for="description">Описание</label>
+            </div>
+
+            <div class="form__radio-wrapper">
+              <span class="form__radio-title">Цвет</span>
+
+              <div class="form__radio-inner-wrapper">
+                <input id="color-white" type="radio" name="color" value="white" aria-label="Выбрать белый цвет" required>
+                <label class="form__radio-label form__radio-label--white" for="color-white"></label>
+
+                <input id="color-black" type="radio" name="color" value="black" aria-label="Выбрать черный цвет" required>
+                <label class="form__radio-label form__radio-label--black" for="color-black"></label>
+
+                <input id="color-grey" type="radio" name="color" value="grey" aria-label="Выбрать серый цвет" required>
+                <label class="form__radio-label form__radio-label--grey" for="color-grey"></label>
+
+                <input id="color-red" type="radio" name="color" value="red" aria-label="Выбрать красный цвет" required>
+                <label class="form__radio-label form__radio-label--red" for="color-red"></label>
+
+                <input id="color-green" type="radio" name="color" value="green" aria-label="Выбрать зеленый цвет" required>
+                <label class="form__radio-label form__radio-label--green" for="color-green"></label>
+              </div>
+            </div>
+
+            <div class="form__select-wrapper">
+              <div class="form__select-title-wrapper">
+                <p>Статус</p>
+              </div>
+
+              <div class="form__select-options-wrapper">
+                <input id="in-stock" type="radio" name="status" value="in-stock" required>
+                <label for="in-stock">В наличии</label>
+
+                <input id="pending" type="radio" name="status" value="pending" required>
+                <label for="pending">Ожидается</label>
+
+                <input id="out-of-stock" type="radio" name="status" value="out-of-stock" required>
+                <label for="out-of-stock">Нет в наличии</label>
+              </div>
+            </div>
+
+            <button class="form__button" type="submit">Отправить</button>
+          </form>
         </div>
       </section>
 
