@@ -100,7 +100,7 @@ module.exports = {
   mode: 'development',
   context: path.resolve(__dirname, 'src'),
   entry: {
-    'bundle': ["@babel/polyfill", './index.tsx'],
+    'bundle': ["@babel/polyfill", './js/index.js'],
   },
   output: {
     filename: (pathData) => {

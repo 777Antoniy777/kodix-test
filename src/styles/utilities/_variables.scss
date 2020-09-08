@@ -1,14 +1,24 @@
 // font
-// $segoe: "SegoeU I", "Arial", sans-serif;
+$roboto: "Roboto", "Arial", sans-serif;
 
 // color
 $c-white: #ffffff;
 $c-black: #000000;
+$c-shark: #282d30;
+$c-mine-shaft: #323232;
+$c-grey: #8b8b8b;
+$c-monza: #c3002f;
+$c-silver: #c4c4c4;
+$c-thunderbird: #dd1c10;
+$c-mantis: #77cf61;
 
 // width
-$w-layout-dt: 1440px;
-$w-layout-mb: 375px;
-$w-site-wrapper-dt: 1200px
+$w-layout-mb: 360px;
+$w-layout-tb: 720px;
+$w-layout-dt: 978px;
+$w-site-wrapper-mb: 340px;
+$w-site-wrapper-tb: 700px;
+$w-site-wrapper-dt: 958px;
 
 // @media
 $media-dt: 1024px;

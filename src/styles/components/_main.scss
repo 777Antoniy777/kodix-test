@@ -1,0 +1,9 @@
+.main {
+  &__title {
+    @include reset-margin;
+    font-size: 42px;
+    line-height: 49px;
+    font-weight: 700;
+    text-align: center;
+  }
+}
