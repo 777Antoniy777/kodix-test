@@ -29,6 +29,14 @@ body {
   max-width: $w-site-wrapper-dt;
   margin-right: auto;
   margin-left: auto;
+
+  @media (min-width: $media-tb) {
+    @include set-width($w-site-wrapper-tb, $w-layout-tb);
+  }
+
+  @media (min-width: $media-dt) {
+    @include set-width($w-site-wrapper-dt, $w-layout-dt);
+  }
 }
 
 a {
