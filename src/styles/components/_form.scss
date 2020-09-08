@@ -1,4 +1,6 @@
 .form {
+  padding-bottom: 60px;
+
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -21,7 +23,7 @@
     &--name {
       @media (min-width: $media-tb) {
         @include set-width($w-form-field-wrapper-1, $w-site-wrapper-tb);
-        margin-right: $m-form-field-wrapper * 100% / $w-site-wrapper-tb;
+        margin-right: $m-form-field-wrapper-1 * 100% / $w-site-wrapper-tb;
         order: -3;
       }
     }
@@ -96,7 +98,7 @@
     margin-bottom: 25px;
 
     @media (min-width: $media-tb) {
-      @include set-width($w-form-field-wrapper-, $w-site-wrapper-tb);
+      @include set-width($w-form-field-wrapper-1, $w-site-wrapper-tb);
       margin-top: 10px;
       margin-right: $m-form-field-wrapper-1 * 100% / $w-site-wrapper-tb;
       margin-bottom: 0;

@@ -1,0 +1,90 @@
+.cars {
+  &__title {
+    position: relative;
+    margin: 0;
+    padding-left: 15px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: $c-shark;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 3px;
+      height: 18px;
+      background-color: $c-grey;
+    }
+  }
+
+  &__table {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 300;
+    color: $c-mine-shaft;
+  }
+
+  &__table-row {
+    &--headers {
+      display: none;
+    }
+
+    &--content {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 7px;
+    }
+  }
+
+  &__table-cell {
+    &--title {
+      position: relative;
+      width: 100%;
+      min-height: 100px;
+    }
+
+    &--price,
+    &--color {
+      position: absolute;
+    }
+
+    &--price {
+      top: -1px;
+      right: -1px;
+      width: 110px;
+    }
+
+    &--color {
+      top: 0;
+      right: 123px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__table-cell-title {
+    width: 145px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  &__table-cell-description {
+    font-size: 13px;
+    line-height: 16px;
+    color: $c-grey;
+  }
+
+  &__table-cell-color {
+    width: 19px;
+    height: 19px;
+    background-color: $c-black;
+    border-radius: 50%;
+  }
+}
