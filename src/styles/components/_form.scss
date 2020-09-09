@@ -1,6 +1,14 @@
 .form {
   padding-bottom: 60px;
 
+  @media (min-width: $media-tb) {
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $media-dt) {
+    padding-bottom: 124px;
+  }
+
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
