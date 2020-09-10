@@ -1,0 +1,25 @@
+.main-footer {
+  min-height: 102px;
+  margin-top: auto;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 300;
+  color: $c-white;
+  background-color: $c-shark;
+
+  .site-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: inherit;
+  }
+
+  &__description {
+    @include reset-margin;
+    text-align: center;
+
+    &--status {
+      text-transform: uppercase;
+    }
+  }
+}
