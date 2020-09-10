@@ -12,6 +12,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-width: $media-mb;
   height: 100%;
   margin: 0;

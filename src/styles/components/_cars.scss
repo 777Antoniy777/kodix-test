@@ -1,4 +1,12 @@
 .cars {
+  @media (min-width: $media-tb) {
+    margin-bottom: 318px;
+  }
+
+  @media (min-width: $media-dt) {
+    margin-bottom: 266px;
+  }
+
   .site-wrapper {
     width: 100%;
 
@@ -14,7 +22,7 @@
   &__title {
     position: relative;
     margin: 0;
-    padding: 0 20px 30px 25px;
+    padding: 0 20px 14px 25px;
     font-size: 20px;
     line-height: 23px;
     text-transform: uppercase;
@@ -22,6 +30,7 @@
 
     @media (min-width: $media-tb) {
       padding-left: 15px;
+      padding-bottom: 30px;
     }
 
     &::before {
@@ -65,17 +74,13 @@
       position: relative;
       display: flex;
       flex-wrap: wrap;
-      margin-bottom: 12px;
-      padding: 0 10px 20px 17px;
+      padding: 16px 10px 15px 17px;
+      background-color: $c-black-haze;
       border-bottom: 1px solid #dadada;
 
       @media (min-width: $media-tb) {
-        margin-bottom: 1px;
-        padding: 10px 0 14px 12px;
-      }
-
-      @media (min-width: $media-dt) {
-        margin-bottom: 6px;
+        margin-bottom: 0;
+        padding: 10px 0 12px 12px;
       }
 
       &:last-child {
@@ -168,13 +173,21 @@
         @media (min-width: $media-tb) {
           padding-bottom: 3px;
         }
+
+        @media (min-width: $media-dt) {
+          padding-bottom: 5px;
+        }
       }
 
       p:last-child {
         padding-bottom: 12px;
 
         @media (min-width: $media-tb) {
-          padding-bottom: 0;
+          padding-bottom: 2px;
+        }
+
+        @media (min-width: $media-dt) {
+          padding-bottom: 4px;
         }
       }
     }
@@ -182,6 +195,7 @@
     &--price,
     &--color {
       position: absolute;
+      top: 16px;
 
       @media (min-width: $media-tb) {
         position: static;
@@ -199,7 +213,6 @@
     }
 
     &--price {
-      top: -1px;
       right: 10px;
       width: 110px;
 
@@ -215,12 +228,15 @@
     }
 
     &--color {
-      top: 0;
       right: 133px;
 
       @media (min-width: $media-tb) {
         @include set-width($w-cars-table-cell-color-wrapper-tb, $w-cars-table-header-row-wrapper-tb);
         margin-right: $m-cars-table-cell-color-wrapper-tb * 100% / $w-cars-table-header-row-wrapper-tb;
+      }
+
+      @media (min-width: $media-dt) {
+        margin-right: $m-cars-table-cell-color-wrapper-dt * 100% / $w-cars-table-header-row-wrapper-dt;
       }
     }
 
@@ -246,7 +262,7 @@
 
       @media (min-width: $media-dt) {
         @include set-width($w-cars-table-cell-status-wrapper-tb, $w-cars-table-header-row-wrapper-dt);
-        margin-right: $m-cars-table-cell-status-wrapper-tb * 100% / $w-cars-table-header-row-wrapper-dt;
+        margin-right: $m-cars-table-cell-status-wrapper-dt * 100% / $w-cars-table-header-row-wrapper-dt;
       }
     }
 
@@ -312,7 +328,34 @@
     line-height: 20px;
     font-weight: 400;
     color: $c-white;
-    background: $c-shark;
+    background-color: $c-shark;
+    border: none;
     border-radius: 20px;
+    transition: color 0.3s, background-color 0.3s;
+    cursor: pointer;
+
+    @media (min-width: $media-tb) {
+      color: $c-grey;
+      background-color: transparent;
+    }
+
+    // hover
+    &:hover {
+      background-color: rgba($c-shark, 0.7);
+
+      @media (min-width: $media-tb) {
+        color: $c-white;
+        background-color: $c-shark;
+      }
+    }
+
+    // active
+    &:active {
+      background-color: rgba($c-shark, 0.5);
+
+      @media (min-width: $media-tb) {
+        color: $c-white;
+      }
+    }
   }
 }
