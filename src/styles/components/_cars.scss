@@ -129,11 +129,11 @@
 
     &--status {
       @include set-width($w-cars-table-header-status-wrapper-tb, $w-cars-table-header-row-wrapper-tb);
-      margin-right: m-cars-table-header-status-wrapper-tb * 100% / $w-cars-table-header-row-wrapper-tb;
+      margin-right: $m-cars-table-header-status-wrapper-tb * 100% / $w-cars-table-header-row-wrapper-tb;
 
       @media (min-width: $media-dt) {
         @include set-width($w-cars-table-header-status-wrapper-tb, $w-cars-table-header-row-wrapper-dt);
-        margin-right: m-cars-table-header-status-wrapper-dt * 100% / $w-cars-table-header-row-wrapper-dt;
+        margin-right: $m-cars-table-header-status-wrapper-dt * 100% / $w-cars-table-header-row-wrapper-dt;
       }
     }
 
@@ -228,25 +228,25 @@
       margin-right: 14px;
 
       @media (min-width: $media-tb) {
-        @include set-width(36px, $w-cars-table-header-row-wrapper-tb);
-        margin-right: 10px * 100% / $w-cars-table-header-row-wrapper-tb;
+        @include set-width($w-cars-table-cell-year-wrapper-tb, $w-cars-table-header-row-wrapper-tb);
+        margin-right: $m-cars-table-cell-year-wrapper-tb * 100% / $w-cars-table-header-row-wrapper-tb;
       }
 
       @media (min-width: $media-dt) {
-        @include set-width(36px, 930px);
-        margin-right: 14px * 100% / 930px;
+        @include set-width($w-cars-table-cell-year-wrapper-tb, $w-cars-table-header-row-wrapper-dt);
+        margin-right: $m-cars-table-cell-year-wrapper-dt * 100% / $w-cars-table-header-row-wrapper-dt;
       }
     }
 
     &--status {
       @media (min-width: $media-tb) {
-        @include set-width(85px, $w-cars-table-header-row-wrapper-tb);
-        margin-right: 35px * 100% / $w-cars-table-header-row-wrapper-tb;
+        @include set-width($w-cars-table-cell-status-wrapper-tb, $w-cars-table-header-row-wrapper-tb);
+        margin-right: $m-cars-table-cell-status-wrapper-tb * 100% / $w-cars-table-header-row-wrapper-tb;
       }
 
       @media (min-width: $media-dt) {
-        @include set-width(85px, 930px);
-        margin-right: 35px * 100% / 930px;
+        @include set-width($w-cars-table-cell-status-wrapper-tb, $w-cars-table-header-row-wrapper-dt);
+        margin-right: $m-cars-table-cell-status-wrapper-tb * 100% / $w-cars-table-header-row-wrapper-dt;
       }
     }
 
@@ -255,12 +255,12 @@
       margin-left: auto;
 
       @media (min-width: $media-tb) {
-        margin-right: 4px * 100% / 672px;
+        margin-right: $m-cars-table-cell-button-wrapper-tb * 100% / $w-cars-table-header-row-wrapper-tb;
         margin-left: 0;
       }
 
       @media (min-width: $media-dt) {
-        margin-right: 24px * 100% / 930px;
+        margin-right: $m-cars-table-cell-button-wrapper-dt * 100% / $w-cars-table-header-row-wrapper-dt;
       }
     }
 
