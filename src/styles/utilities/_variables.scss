@@ -1,18 +1,64 @@
 // font
-// $segoe: "SegoeU I", "Arial", sans-serif;
+$roboto: "Roboto", "Arial", sans-serif;
 
 // color
 $c-white: #ffffff;
+$c-black-haze: #f5f6f6;
 $c-black: #000000;
+$c-shark: #282d30;
+$c-mine-shaft: #323232;
+$c-grey: #8b8b8b;
+$c-monza: #c3002f;
+$c-silver: #c4c4c4;
+$c-thunderbird: #dd1c10;
+$c-mantis: #77cf61;
 
 // width
-$w-layout-dt: 1440px;
-$w-layout-mb: 375px;
-$w-site-wrapper-dt: 1200px
+$w-layout-mb: 360px;
+$w-layout-tb: 720px;
+$w-layout-dt: 978px;
+$w-site-wrapper-mb: 340px;
+$w-site-wrapper-tb: 700px;
+$w-site-wrapper-dt: 958px;
+$w-form-field-wrapper-1: 220px;
+$w-form-field-wrapper-2: 160px;
+$w-cars-table-header-row-wrapper-tb: 672px;
+$w-cars-table-header-row-wrapper-dt: 930px;
+$w-cars-table-header-title-wrapper-tb: 256px;
+$w-cars-table-header-title-wrapper-dt: 454px;
+$w-cars-table-header-year-wrapper-tb: 36px;
+$w-cars-table-header-status-wrapper-tb: 85px;
+$w-cars-table-header-price-wrapper-tb: 186px;
+$w-cars-table-cell-title-wrapper-tb: 250px;
+$w-cars-table-cell-title-wrapper-dt: 448px;
+$w-cars-table-cell-price-wrapper-tb: 100px;
+$w-cars-table-cell-color-wrapper-tb: 36px;
+$w-cars-table-cell-year-wrapper-tb: 36px;
+$w-cars-table-cell-status-wrapper-tb: 85px;
+$w-cars-table-cell-status-wrapper-dt: 100px;
+
+// margin
+$m-form-field-wrapper-1: 20px;
+$m-form-field-wrapper-2: 18px;
+$m-cars-table-header-title-wrapper-tb: 15px;
+$m-cars-table-header-year-wrapper-tb: 10px;
+$m-cars-table-header-year-wrapper-dt: 20px;
+$m-cars-table-header-color-wrapper-tb: 12px;
+$m-cars-table-header-color-wrapper-dt: 28px;
+$m-cars-table-header-status-wrapper-tb: 35px;
+$m-cars-table-header-status-wrapper-dt: 36px;
+$m-cars-table-cell-price-wrapper-tb: 3px;
+$m-cars-table-cell-price-wrapper-dt: 18px;
+$m-cars-table-cell-color-wrapper-tb: 10px;
+$m-cars-table-cell-color-wrapper-dt: 18px;
+$m-cars-table-cell-year-wrapper-tb: 13px;
+$m-cars-table-cell-year-wrapper-dt: 14px;
+$m-cars-table-cell-status-wrapper-tb: 33px;
+$m-cars-table-cell-status-wrapper-dt: 20px;
 
 // @media
 $media-dt: 1024px;
-$media-tb: 768px;
+$media-tb: 720px;
 $media-mb: 320px;
 
 // retina

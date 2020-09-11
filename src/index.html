@@ -1,18 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Pantone colors</title>
+    <title>Captain Quack</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="format-detection" content="telephone=no">
-    <meta name="Description" content="Pantone colors">
-    <!-- <link href="./assets/fonts/SegoeUI.woff2" as="font" rel="preload" crossorigin="anonymous"> -->
+    <meta name="Description" content="Car shop">
+    <link href="./assets/fonts/Roboto-Light.woff2" as="font" rel="preload" crossorigin="anonymous">
+    <link href="./assets/fonts/Roboto-Regular.woff2" as="font" rel="preload" crossorigin="anonymous">
+    <link href="./assets/fonts/Roboto-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
   </head>
 
   <body class="main-page">
-    <main>
+    <header class="main-header">
+      <div class="site-wrapper">
 
+        <nav class="main-header__nav nav">
+          <a class="nav__logo-link">
+            <img src="./assets/images/svg/logo-mb.svg" alt="Captain Quack logo">
+          </a>
+        </nav>
+
+      </div>
+    </header>
+
+    <main class="main">
+      <h1 class="main__title">¡Ay caramba!</h1>
+
+      <section class="main__form form">
+        <div class="site-wrapper">
+          <form class="form__wrapper" action="#" method="POST">
+            <h2 class="form__title">Форма добавления нового автомобиля</h2>
+
+            <div class="form__field-wrapper form__field-wrapper--name">
+              <input id="name" type="text" name="name" required>
+              <label for="name">Название</label>
+            </div>
+
+            <div class="form__field-wrapper form__field-wrapper--price">
+              <input id="price" type="text" name="price" required>
+              <label for="price">Цена</label>
+            </div>
+
+            <div class="form__field-wrapper form__field-wrapper--year">
+              <input id="year" type="text" name="year" required>
+              <label for="year">Год</label>
+            </div>
+
+            <div class="form__field-wrapper form__field-wrapper--description">
+              <input id="description" type="text" name="description">
+              <label for="description">Описание</label>
+            </div>
+
+            <div class="form__radio-wrapper">
+              <span class="form__radio-title">Цвет</span>
+
+              <div class="form__radio-inner-wrapper">
+                <input id="color-white" type="radio" name="color" value="white" aria-label="Выбрать белый цвет" required>
+                <label class="form__radio-label form__radio-label--white" for="color-white"></label>
+
+                <input id="color-black" type="radio" name="color" value="black" aria-label="Выбрать черный цвет" required>
+                <label class="form__radio-label form__radio-label--black" for="color-black"></label>
+
+                <input id="color-grey" type="radio" name="color" value="grey" aria-label="Выбрать серый цвет" required>
+                <label class="form__radio-label form__radio-label--grey" for="color-grey"></label>
+
+                <input id="color-red" type="radio" name="color" value="red" aria-label="Выбрать красный цвет" required>
+                <label class="form__radio-label form__radio-label--red" for="color-red"></label>
+
+                <input id="color-green" type="radio" name="color" value="green" aria-label="Выбрать зеленый цвет" required>
+                <label class="form__radio-label form__radio-label--green" for="color-green"></label>
+              </div>
+            </div>
+
+            <div class="form__select-wrapper">
+              <div class="form__select-title-wrapper">
+                <p>Статус</p>
+              </div>
+
+              <div class="form__select-options-wrapper">
+                <input id="in-stock" type="radio" name="status" value="in-stock" required>
+                <label for="in-stock">В наличии</label>
+
+                <input id="pending" type="radio" name="status" value="pending" required>
+                <label for="pending">Ожидается</label>
+
+                <input id="out-of-stock" type="radio" name="status" value="out-of-stock" required>
+                <label for="out-of-stock">Нет в наличии</label>
+              </div>
+            </div>
+
+            <button class="form__button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="main__cars cars">
+        <div class="site-wrapper">
+          <h2 class="cars__title">Автомобили в наличии</h2>
+
+          <table class="cars__table">
+            <tbody>
+              <tr class="cars__table-row cars__table-row--headers">
+                <th class="cars__table-header cars__table-header--title">Название</th>
+                <th class="cars__table-header cars__table-header--year">Год</th>
+                <th class="cars__table-header cars__table-header--color">Цвет</th>
+                <th class="cars__table-header cars__table-header--status">Статус</th>
+                <th class="cars__table-header cars__table-header--price">Цена</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
+
+    <footer class="main__main-footer main-footer">
+      <div class="site-wrapper">
+        <div class="main-footer__wrapper">
+          <p class="main-footer__description main-footer__description--status">© 2020 Captain Quack</p>
+          <p class="main-footer__description">Десница тысячелетия и моллюск!</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cars-row template -->
+    <template id="cars-row">
+      <tr class="cars__table-row cars__table-row--content">
+        <td class="cars__table-cell cars__table-cell--title">
+          <p class="cars__table-cell-title"></p>
+        </td>
+        <td class="cars__table-cell cars__table-cell--year"></td>
+        <td class="cars__table-cell cars__table-cell--color">
+          <div class="cars__table-cell-color"></div>
+        </td>
+        <td class="cars__table-cell cars__table-cell--status"></td>
+        <td class="cars__table-cell cars__table-cell--price"></td>
+        <td class="cars__table-cell cars__table-cell--button">
+          <button class="cars__table-cell-button" type="button">Удалить</button>
+        </td>
+      </tr>
+    </template>
   </body>
 </html>

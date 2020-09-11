@@ -12,23 +12,33 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-width: $media-mb;
   height: 100%;
   margin: 0;
-  padding: 10px;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
-  line-height: 21px;
-  // font-family: $segoe;
-  color: $c-black;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: $roboto;
+  color: $c-shark;
   overflow-x: hidden;
 }
 
 .site-wrapper {
+  @include set-width($w-site-wrapper-mb, $w-layout-mb);
   max-width: $w-site-wrapper-dt;
   margin-right: auto;
   margin-left: auto;
+
+  @media (min-width: $media-tb) {
+    @include set-width($w-site-wrapper-tb, $w-layout-tb);
+  }
+
+  @media (min-width: $media-dt) {
+    @include set-width($w-site-wrapper-dt, $w-layout-dt);
+  }
 }
 
 a {
