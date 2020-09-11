@@ -72,8 +72,6 @@ const createJSLoader = () => {
     'babel-loader',
   ];
 
-  if (isDev) loaders.push('eslint-loader');
-
   return loaders;
 };
 
